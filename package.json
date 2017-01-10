@@ -1,0 +1,25 @@
+{
+  "name": "Payment_w_Stripe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ev2900/Payment_w_Stripe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ev2900/Payment_w_Stripe/issues"
+  },
+  "homepage": "https://github.com/ev2900/Payment_w_Stripe#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "hbs": "*",
+    "stripe": "*"
+  }
+}
