@@ -34,7 +34,7 @@ app.post('/charge', function(req, res){
 		currency: "usd",
 		source: token 
 	}, function(err, charge) {
-		if(err & err.type === "StripeCardError") {
+		if(err) {
 			console.log("Your card was declined");
 		}
 	});
