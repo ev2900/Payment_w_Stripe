@@ -27,8 +27,21 @@ app.get('/paysuccess', function(req, res){
 });
 
 app.post('/charge', function(req, res){
-	
+	var token = req.body.stripeToken;
+	var chargeAmount = req.body.chargeAmount;
+	var charge = stripe.charges.create({
+		amount: chargeAmount,
+		currency: "usd",
+		source: token 
+	}, function(err, charge) {
+		if(err & err.type === "StripeCardError") {
+			console.log("Your card was declined");
+		}
+	});
+	console.log("Your payment was successful");
+	res.redirect('/paysuccess');
 });
+	
 
 // Set port 
 app.set('port', (process.env.PORT || 3000));

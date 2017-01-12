@@ -19,7 +19,20 @@
 
 	<div align="center">
 		<form action="/charge" method="post">
-			<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_bczQSusevztxEAPcKMFyp6uZ" data-amount="30" data-name="carabiner" data-description="purchase of a carabiner" data-locale="auto" data-currency="usd"></script>
+			
+			<script 
+				src="https://checkout.stripe.com/checkout.js" 
+				class="stripe-button" 
+				data-key="pk_test_bczQSusevztxEAPcKMFyp6uZ" 
+				data-amount="30" 
+				data-name="carabiner"
+				data-description="purchase of a carabiner" 
+				data-locale="auto" 
+				data-currency="usd">
+			</script>
+
+			<input type="hidden" name="chargeAmount" value="30">
+
 		</form>
 	</div>
 
